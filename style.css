@@ -1,0 +1,216 @@
+:root{
+  --background: #f9e5c1;
+  --prim: #ffffff;
+  --sec: #30385a;
+  --ter: #f7f7f77b;
+  --footer: #457ab6;
+  --a: #2e7a69;
+  --text: #292725;
+}
+
+html{
+  width: auto;
+  margin: 30px 30px 30px 30px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+body {
+  background-image: url('pic/bgImage.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+.center {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  justify-items: center;
+}
+img {
+  display: block;
+  margin: auto;
+  width: 40%;
+}
+.wrapper {
+  height: 300px;
+  position: relative;
+  background: #fff;
+  color: #000;
+  border-radius: 3%;
+  margin: 20px;
+}
+.wrapper h2 {
+  font-family: 'Mitr', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+.wrapper .btn-dark {
+  width: 100px;
+  font-family: 'Mitr', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 50px;
+}
+
+#home-btn {
+  width: 150px;
+  font-family: 'Mitr', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 50px;
+  margin: 20px;
+}
+
+#progress-container {
+  width: 100%;
+  background-color: var(--text);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#progress-bar {
+  width: 0%;
+  height: 20px;
+  background-color: var(--footer);
+  border-radius: 10px;
+  transition: width 2s ease;
+}
+
+#load img{
+  max-width: 150px;   
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#quiz{
+  display: grid;
+  place-items: center;
+  text-align: justify;
+}
+
+.nar-style {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text);
+  text-align: center;
+  padding: 20px;
+}
+
+.ep-style{
+  font-size: 13px;
+  text-align: center;
+  color: var(--text);
+}
+
+.option{
+  font-size: 16px;
+  width: 50%;
+  color: var(--text);
+  justify-content: center;
+  margin: 0;
+}
+
+.option button {
+  width: 100%;
+  padding: 10px 5px 10px 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 15px;
+  background-color: var(--ter);
+  color: var(--text);
+  justify-items: center;
+}
+
+.option button:hover{
+  background-color: var(--prim);
+  color: var(--sec);
+}
+
+.scale-container {
+    /* To make items stick together like in the image, reduce padding/margin if needed
+       and potentially use grid or flex with no gap */
+    gap: 0.25rem; /* Small gap between items */
+}
+
+.scale-container label {
+    position: relative;
+    padding: 0.75rem 0.5rem; /* Adjusted padding */
+    border-radius: 0.5rem;
+    display: flex; /* Ensure flex for internal alignment */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.875rem; /* Tailwind text-sm */
+    line-height: 1.25rem;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+/* Custom Radio Button Visual */
+.scale-container input[type="radio"].sr-only { /* sr-only hides it visually but keeps it accessible */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.scale-container input[type="radio"]:focus + .w-6.h-6 {
+    outline: 2px solid #a78bfa; /* Tailwind purple-300 for focus indicator */
+    outline-offset: 2px;
+}
+
+/* Inner dot animation */
+.w-3.h-3.rounded-full {
+    transform: scale(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.w-6.h-6.rounded-full.border-indigo-600 .w-3.h-3.rounded-full.scale-100 {
+    transform: scale(1);
+}
+
+/* Tooltip styles */
+.tooltip {
+    /* Tailwind classes are already mostly applied in JS */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s;
+}
+
+.group:hover .tooltip,
+.group:focus-within .tooltip {
+    display: block; /* Override hidden */
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom styles for progress bar percentage text inside the bar */
+#progress-bar {
+    text-align: right;
+    color: white; /* Ensure text is visible on dark bar */
+    padding-right: 0.5rem; /* Space from the right edge */
+    font-size: 0.75rem; /* Tailwind text-xs */
+    font-weight: 600; /* Tailwind font-semibold */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align text to the right */
+}
+
+#dogPic {
+  display: block;
+  margin: auto;
+  width: 70%;
+}
