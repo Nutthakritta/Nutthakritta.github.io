@@ -155,7 +155,7 @@ function matchUserToDogGroup(scores) {
     }
 
     // 2. LOW-ENERGY COMPANION (กลุ่ม 3) - เหมาะกับเจ้าของที่สงบและมั่นคง
-    if ((levels.E === 'Low' && levels.N === 'Low') || (levels.E === 'Mid' && levels.N === 'Low')) {
+    if (levels.E === 'Low' && levels.N === 'Low') {
         return DOG_GROUPS.LOW_COMPANION;
     }
     
